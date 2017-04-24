@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="blocChat">
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Bloc Chat</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    </head>
+    <body>
+        <ui-view></ui-view>
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <!-- AngularFire -->
+        <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/3.8.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyADfi_dtCpYk03TQlcssQL2rhKIpp50IvA",
+            authDomain: "bloc-chat-1fa1f.firebaseapp.com",
+            databaseURL: "https://bloc-chat-1fa1f.firebaseio.com",
+            projectId: "bloc-chat-1fa1f",
+            storageBucket: "bloc-chat-1fa1f.appspot.com",
+            messagingSenderId: "640286279875"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/services/rooms.js"></script>
+        <script src="/scripts/controllers/HomeCtrl.js"></script>
+    </body>
+</html>
