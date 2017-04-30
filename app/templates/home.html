@@ -1,9 +1,19 @@
-<section>
-    <nav class="sidebar column fourth">
-        <a ui-sref="home">
-            <h1 class="title">Bloc Chat</h1>
-        </a>
-        <button ng-click="home.addRoom()">New Room</button>
-            <h2 class="rooms-list" ng-repeat="room in home.rooms">{{ room.name }}</h2>
+<section class="sidebar-main">
+    <nav class="sidebar column">
+            <span class="sidebar-title">
+                <h1>Bloc Chat</h1>
+            </span>
+            <span class="new-room">
+                <button class="new-room" ng-click="home.addRoom()">New Room</button>
+            </span>
+            <span class="rooms-list" ng-repeat="room in home.rooms" ng-click="setCurrentRoom(room)">{{ room.name }}</span>
     </nav>
+</section>
+<section class="content">
+    <h3>{{ home.currentRoom.name }} Messages</h3>
+    <div class="message" ng-repeat="message in messages">
+        <div class="username">{{ message.username }}</div>
+        <div class="timestamp">{{ message.timestamp}}</div>
+        <div class="user-message">{{ message.content }}</div>
+    </div>
 </section>

@@ -1,15 +1,15 @@
 
 
 .modal{
+    position: absolute;
     width: 50%;
     height: 40%;
-    display: inline-block;
-    padding-top: 100px;
-    position: relative;
-    z-index: 1;
+    top: 20%;
+    left: 30%;
     padding: 5px;
     margin: auto;
     background: rgba(200,200, 200,.75);
+    z-index: 1;
 }
 
 .modal-content {
@@ -19,7 +19,6 @@
     /* To center horizontally */
     margin: auto;
     pointer-events: all;
-    z-index: 1;
 }
 
 .vertical-alignment-helper {
@@ -80,12 +79,10 @@
 }
 
 .modal-body{
-    width: 70%;
+    width: 100%;
     margin: auto;
-    /*position: relative;*/
+    position: relative;
     /*left: 275px;*/
-    display: block;
-
 }
 
 .new {
