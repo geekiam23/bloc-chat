@@ -5,7 +5,7 @@
         this.addRoom = function () {
             $uibModal.open({
                 templateUrl: '/templates/addRoom.html',
-                controller: 'AddRoomCtrl as addRoom',
+                controller: 'ModalCtrl as modal',
                 size: 'sm',
             });
         };

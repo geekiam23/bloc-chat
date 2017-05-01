@@ -9,9 +9,9 @@
             <span class="rooms-list" ng-repeat="room in home.rooms" ng-click="setCurrentRoom(room)">{{ room.name }}</span>
     </nav>
 </section>
-<section class="content">
+<section class="content" >
     <h3>{{ home.currentRoom.name }} Messages</h3>
-    <div class="message" ng-repeat="message in messages">
+    <div class="message" ng-repeat="messages in messages">
         <div class="username">{{ message.username }}</div>
         <div class="timestamp">{{ message.timestamp}}</div>
         <div class="user-message">{{ message.content }}</div>
