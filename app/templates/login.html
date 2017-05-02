@@ -4,9 +4,9 @@
     </div>
     <div class="modal-body">
         <h5 class="modal-prompt">Enter a username</h5>
-        <input class="input" type="text" name="input" ng-modal="username" required>
+        <input class="input" type="text" name="input" ng-model="username" required>
     </div>
     <div class="modal-footer">
-        <button class="new" type="button" ng-click="createUsername(username)" ng-disabled="username == ''">Create user</button>
+        <button class="new" type="button" ng-click="createUsername(username)" ng-disabled="username == undefined">Create user</button>
      </div>
 </section>

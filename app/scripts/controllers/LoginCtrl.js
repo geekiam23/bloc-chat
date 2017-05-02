@@ -1,12 +1,7 @@
 (function(){
-    function ModalCtrl(Room, $uibModalInstance, $scope, $cookies) {
+    function LoginCtrl ($uibModalInstance, $scope, $cookies) {
         $scope.close = function () {
             $uibModalInstance.dismiss();
-        };
-        $scope.submit = function (roomName) {
-            console.log(Room);
-            Room.add(roomName);
-            $uibModalInstance.close();
         };
 
         $scope.createUsername = function(username) {
@@ -20,5 +15,5 @@
 
     angular
         .module('blocChat')
-        .controller('ModalCtrl', ['Room', '$uibModalInstance', '$scope', '$cookies', ModalCtrl]);
+        .controller('LoginCtrl', ['$uibModalInstance', '$scope', '$cookies', LoginCtrl]);
 })();

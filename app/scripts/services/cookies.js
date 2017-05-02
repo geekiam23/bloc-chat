@@ -5,7 +5,7 @@
             $uibModal.open({
                 templateUrl: '/templates/login.html',
                 size: 'sm',
-                controller: 'ModalCtrl as modal',
+                controller: 'LoginCtrl as login',
                 keyboard: false,
                 backdrop: 'static'
             });

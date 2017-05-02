@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 html{
     height: 100%;
 }
@@ -8,76 +13,134 @@ body{
 
 .sidebar-main {
     height: 100vh;
-    width: 20%;
-    float:left;
+    position: absolute;
+    width: 250px;
+    /*width: 20%;
+    float:left;*/
     padding: 0.5rem;
-    background-color: rgb(226,232,227);
-    /*position: absolute;
-    top: 0;
-    left: 0;*/
-}
-
-.content{
-    height: 100vh;
-    /*width: 70%;*/
-    /*float: right;*/
-    background-color: blue;
+    background-color: rgb(43,58,66);
 }
 
 .sidebar-title {
-    padding: 0px;
+    /*padding-bottom: 0;*/
+    margin: 0 auto;
     position: relative;
     font-family: fantasy;
-    font-size: 25px;
-    color: black;
-    display: inline-block;
+    color: rgb(239,239,239);
+    display: table;
 }
 
-.sidebar .new-room{
+#chat-title{
+    margin: 15px 5px 2px 5px;
+    font-size: 50px;
+}
+
+.new-room{
     font-size: 10px;
+    position: relative;
+    padding: 2px 0px 20px 0px;
+    margin: 0 auto;
+    display: table;
+}
+
+.divider{
+    border-bottom: 5px solid white;*/
+    margin-bottom: 10px;
+}
+
+#btn-new{
+    background-color: rgb(189,212,222);
+    border: none;
+    color: rgb(43,58,66);
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+    margin: 0 auto;
 }
 
 .rooms-list {
-    /*width: 100%;*/
+    color: rgb(239,239,239);
     display: block;
     font-family: fantasy;
     font-size: 20px;
-    margin: 5px 0 5px 0;
+    padding: 15px 0 10px 0;
 }
 
 a {
     text-decoration: none;
 }
 
-@media (min-width: 640px){
-    html{ font-size: 112%; }
 
-    .column {
-        float: left;
-        padding-left: 1rem;
-        padding-right: 1rem;
- }
-
-    .column.full { width: 100%; }
-    .column.two-thirds { width: 66.7%; }
-    .column.half { width: 50%; }
-    .column.third { width: 33.3%; }
-    .column.fourth { width: 25%; }
-    .column.sixth { width: 16%; }
-    .column.five-sixth { width: 84%; }
-    .column.flow-opposite { float: right; }
+/* Content on the Right Side - Main Content */
+.content{
+    height: 100vh;
+    background-color: rgb(239,239,239);
+    margin-left: 268px;
 }
 
-@media (min-width: 1024px){
-  html{ font-size: 120%; }
-}
-
-.clearfix::before,
-.clearfix::after {
-    content: " ";
+.main-room-title{
+    margin: 0 auto;
     display: table;
 }
 
-.clearfix::after {
-    clear: both;
+#room-title{
+    margin: 0 auto;
+    color: rgb(43,58,66);
+    font-size: 40px;
+    padding: 20px 0px 40px 0px;
+    font-family: fantasy;
+}
+.message{
+    padding: 10px 20px 10px 20px;
+}
+
+div.message{
+    background: rgb(189,212,222);
+    font: 20px fantasy;
+}
+
+div.message:nth-child(odd){
+    background: rgb(63,87,101);
+}
+
+.timestamp{
+    float: right;
+}
+
+.message-input{
+    position: fixed;
+    bottom: 0;
+    /*margin-left: 269px;*/
+    padding-right: 250px;
+    height: 35px;
+    font-size: 30px;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgb(239,239,239);
+    display: inline;
+}
+
+#msgSend{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(189,212,222);
+    border: none;
+    color: rgb(43,58,66,);
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 8px 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    height: 40px;
+    width: 50px;
+}
+
+@media (min-width: 640px){
+    html{ font-size: 112%; }
+
+
+@media (min-width: 1024px){
+  html{ font-size: 120%; }
 }

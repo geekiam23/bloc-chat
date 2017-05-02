@@ -6,6 +6,10 @@
                 all: rooms,
                 add: function(roomName) {
                     rooms.$add({ name: roomName });
+                },
+
+                delete: function(roomId) {
+                    rooms.$remove(roomId);
                 }
             };
         }

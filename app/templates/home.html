@@ -1,19 +1,27 @@
 <section class="sidebar-main">
-    <nav class="sidebar column">
-            <span class="sidebar-title">
-                <h1>Bloc Chat</h1>
-            </span>
-            <span class="new-room">
-                <button class="new-room" ng-click="home.addRoom()">New Room</button>
-            </span>
-            <span class="rooms-list" ng-repeat="room in home.rooms" ng-click="setCurrentRoom(room)">{{ room.name }}</span>
-    </nav>
+    <div class="divider">
+        <div class="sidebar-title">
+            <h1 id="chat-title">Bloc Chat</h1>
+        </div>
+        <div class="new-room">
+            <button id="btn-new" ng-click="home.addRoom()">New Room</button>
+        </div>
+    </div>
+    <div class="rooms-list" ng-repeat="room in home.rooms" ng-click="setCurrentRoom(room)">{{ room.name }}</div>
 </section>
 <section class="content" >
-    <h3>{{ home.currentRoom.name }} Messages</h3>
-    <div class="message" ng-repeat="messages in messages">
-        <div class="username">{{ message.username }}</div>
-        <div class="timestamp">{{ message.timestamp}}</div>
+    <div class="main-room-title">
+        <h3 id="room-title">{{ currentRoom.name }} Messages</h3>
+    </div>
+    <div class="message" ng-repeat="message in messages | orderBy:'-'">
+        <div class="username">{{ message.username }}:</div>
+        <div class="timestamp">{{ message.sentAt}}</div>
         <div class="user-message">{{ message.content }}</div>
     </div>
+    <form ng-submit="sendMessage(newMessage)" ng-show="currentRoom">
+  		<input class="message-input" type="text" name="input" ng-model="newMessage" placeholder="Enter Message Here" autocomplete="off"></input>
+  		<div >
+			<button type="submit" id="msgSend">Send</button>
+		</div>
+    </form>
 </section>
